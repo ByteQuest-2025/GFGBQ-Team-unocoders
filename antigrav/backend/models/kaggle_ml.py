@@ -9,7 +9,7 @@ import joblib
 # ------------------ DIABETES MODEL ------------------
 
 def train_diabetes_model():
-    data = pd.read_csv("data/diabetes.csv")
+    data = pd.read_csv("../data/diabetes.csv")
 
     X = data.drop("Outcome", axis=1)
     y = data["Outcome"]
@@ -25,14 +25,14 @@ def train_diabetes_model():
     model = LogisticRegression(max_iter=1000)
     model.fit(X_train, y_train)
 
-    joblib.dump((model, scaler), "model/diabetes_model.pkl")
+    joblib.dump((model, scaler), "models/diabetes_model.pkl")
     return model.score(X_test, y_test)
 
 
 # ------------------ HEART MODEL ------------------
 
 def train_heart_model():
-    data = pd.read_csv("data/heart.csv")
+    data = pd.read_csv("../data/heart.csv")
 
     # Binary target: early risk
     data["heart_risk"] = (data["num"] > 0).astype(int)
@@ -70,7 +70,7 @@ def train_heart_model():
 
     joblib.dump(
         {"model": model, "scaler": scaler, "features": X.columns.tolist()},
-        "model/heart_model.pkl"
+        "models/heart_model.pkl"
     )
 
     return model.score(X_test, y_test)
