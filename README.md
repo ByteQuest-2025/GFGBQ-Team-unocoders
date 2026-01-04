@@ -34,6 +34,9 @@ https://drive.google.com/file/d/17Bl5V6Um6iUMw3dyLLNN1VSjekOMv0ZT/view
 ### Presentation
 https://drive.google.com/file/d/1Pk15ATJfSBvDeF4dnXkH8BZDTFmmjKsx/view?usp=drive_link
 
+### Deploy 
+https://gfgbq-team-unocoders.onrender.com/home
+
 
 ### Project Overview
 EarlySignal is a full-stack, AI-driven healthcare risk assessment system designed to detect silent or early-stage diseases using machine learning.
